@@ -13,7 +13,6 @@
     --color-magenta: #542260;
     --font-tittle: 'Roboto Flex', sans-serif;
     --glass:
-    /* --font-text:'Oswald', sans-serif; */
 }
                                   /*Estilos generales  */
 body{
@@ -68,6 +67,22 @@ nav ul li a:hover {
     color: var(--color-blue);
     font-size: 1.2em;
 }
+/* Animación del header */
+.header{
+    animation-name: header;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+@keyframes header {
+    0%{ transform: translate(0,-70px);
+
+    }
+    100%{
+        transform: translate(0,0);
+    }
+    
+}
 /* Animacíon logos-tittles */
 .header__logo,
 .logo-big,
@@ -76,7 +91,7 @@ nav ul li a:hover {
     animation-name: logo;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 
 @keyframes logo {
@@ -115,7 +130,7 @@ height: 70px;
 padding: 1em;
 font-size: .8em;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
 backdrop-filter: blur(10px);
 border-left: inset .1px var(--color-blanco);
@@ -125,18 +140,26 @@ border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
 }
-.footer__logo{
+.footer-logo{
 width: 40px;
 height: 40px;
 }
-.footer__icon{
+.redes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-icon{
 width: 30px;
 height: 30px;
+margin: 0 2em;
 }
-.footer__icon--youtube{
+.footer-icon--youtube{
 width: 25px;
 height: 25px;
 }
+
+
                                  /*Index  */
 .inicio__container{
     width: 90%;
@@ -151,7 +174,6 @@ height: 25px;
     color: var(--color-blanco);
     line-height: 120px;
     margin-left: 1em;
-    /* transform: translate(50px); */
     text-shadow: 3px 0px 5px var(--color-magenta);
 }
 .inicio__container span{
