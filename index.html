@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agitando el nido</title>
+    <!--animación con aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--bootstrap-->
     <link rel="stylesheet" href="/libs/bootstrap-dist/css/bootstrap.min.css">
     <!--estilos css-->
@@ -12,19 +14,44 @@
     <link rel="icon" href="assets/icons/logo-2.ico">
 </head>
 <body>
-    <header class="header">
-        <a href=""> <img class="header__logo" src="assets/icons/logo-2.png" alt="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="pages/taller.html">Taller</a></li>
-                <li><a href="pages/obras.html">Obras</a></li>
-                <li><a href="pages/encuentros.html">Encuentros</a></li>
-                <li><a href="pages/biografía.html">Biografía</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-                <li><a href="/index.html">Inicio</a></li>
+
+<!--Header de bootstrap-->
+<header>
+    <nav class="navbar navbar-expand-lg contenedor-transparente">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img class="logo-header" src="/assets/icons/logo-2.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="">
+                <img src="/assets/icons/hamburger.png" alt="">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="pages/obras.html">Obras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/taller.html">Taller</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/biografía.html">Bio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/encuentros.html">Encuentros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        </div>
+    </nav>
+</header>
     <main>
         <div class="inicio__container">
             <p>
@@ -32,38 +59,63 @@
             </p>
             <video src="assets/videos/angel.mp4" controls autoplay muted width="750px" height="280px" muted></video>
         </div>
-        <h2 class="subtittle">Colectivo de danza</h2>
-        <p class="text text-index">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequuntur repellendus nisi sapiente ipsam molestiae, odit unde molestias error recusandae deserunt harum veritatis minima? Recusandae quasi dignissimos provident culpa est.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequuntur repellendus nisi sapiente ipsam molestiae, odit unde molestias error recusandae deserunt harum veritatis minima? Recusandae quasi dignissimos provident culpa est.lorem</p>
+        <h2 data-aos="zoom-out-down" data-aos-duration="3000">Colectivo de danza</h2>
+        <p class="text text-index" data-aos="zoom-out-down" data-aos-duration="3000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequuntur repellendus nisi sapiente ipsam molestiae, odit unde molestias error recusandae deserunt harum veritatis minima? Recusandae quasi dignissimos provident culpa est.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, consequuntur repellendus nisi sapiente ipsam molestiae, odit unde molestias error recusandae deserunt harum veritatis minima? Recusandae quasi dignissimos provident culpa est.lorem</p>
+        <!--slider de bootstrap-->
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/taller-10.jpg" class="d-block w-100" alt="foto-taller">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/taller-8.jpg" class="d-block w-100" alt="foto-taller">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/taller-3.jpg" class="d-block w-100" alt="foto-taller">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
         <section>
             <article>
-                <div class="flex-gallery">
-                    <img src="/assets/img/taller-3.jpg" alt="">
-                    <img src="/assets/img/taller-3.jpg" alt="">
-            </div>
             <h3 class="tittle-medium">En movimiento</h3>
-            <p class="text text-index">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
+            <p class="text text-index" data-aos="zoom-out-down" data-aos-duration="3000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
             </article>
             <article>
                 <div class="flex-gallery">
                     <img src="/assets/img/taller-2.jpg" alt="">
                     <img src="/assets/img/taller-2.jpg" alt="">
                 </div>
-                <p class="text text-index">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
+                <p class="text text-index" data-aos="zoom-out-down" data-aos-duration="3000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
             </article>
             <article>
                 <div class="flex-gallery">
                     <img src="/assets/img/taller-4.jpg" alt="">
                     <img src="/assets/img/taller-4.jpg" alt="">
                 </div>
-                <p class="text text-index">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
+                <p class="text text-index" data-aos="zoom-out-down" data-aos-duration="3000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores officiis esse optio alias minima ipsam, ipsa, quos commodi voluptas veritatis ratione eum, possimus illum? Animi eveniet quaerat optio ea? Exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dicta harum praesentium labore beatae, earum hic inventore, eum quia tenetur sapiente natus? Eius dignissimos sunt dolor delectus laudantium rerum?</p>
             </article>
             <div class="flex-gallery">
-                <img src="/assets/taller-8.jpg" alt="">
-                <img src="/assets/taller-8.jpg" alt="">
+                <img src="/assets/img/taller-3.jpg" alt="">
+                <img src="/assets/img/taller-3.jpg" alt="">
             </div>
     </section>
     </main>
-    <footer class="footer">
+    <footer>
         <h4>Desarrollado por Mt</h4>
         <a href="index.html"><img class="footer-logo" src="assets/icons/logo-2.png" alt="logo"></a>
         <div class="redes">
@@ -72,6 +124,12 @@
             <a target="_blank" href="https://www.youtube.com/channel/UCu-ccm0jKSlv8WVDpk6585A"><img class="footer-icon--youtube" src="assets/icons/youtube-icon.svg" alt="icon-youtube"></a>
         </div>
     </footer>
+<!--link de bootstrap-->
 <script src="/libs/bootstrap-dist/js/bootstrap.min.js"></script>
+<!--link de aos-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>

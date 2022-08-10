@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuentros</title>
+    <!--animación con aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--link de bottstrap-->
     <link rel="stylesheet" href="/libs/bootstrap-dist/css/bootstrap.min.css">
     <!--link de css-->
@@ -12,57 +14,85 @@
     <link rel="icon" href="/assets/icons/logo-2.ico">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html"><img class="header__logo" src="/assets/icons/logo-2.png" alt="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="taller.html">Taller</a></li>
-                <li><a href="obras.html">Obras</a></li>
-                <li><a href="encuentros.html">Encuentros</a></li>
-                <li><a href="biografía.html">Biografía</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="/index.html">Inicio</a></li>
+<!--Header de bootstrap-->
+<header>
+    <nav class="navbar navbar-expand-lg contenedor-transparente">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+            <img class="logo-header" src="/assets/icons/logo-2.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="">
+                <img src="/assets/icons/hamburger.png" alt="">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="obras.html">Obras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="taller.html">Taller</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="biografía.html">Bio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="encuentros.html">Encuentros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        </div>
+    </nav>
+</header> 
     <main>
         <div class="container-logo-titulos">
             <img class="logo-big" src="/assets/icons/logo-2.png" alt="">
-            <h1 class="tittle tittle-encuentros">Encuentros</h1>
+            <h1 class="tittle tittle-encuentros"data-aos="fade-left" data-aos-duration="3000">Encuentros</h1>
         </div>
-            
-            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni beatae reiciendis nam minus velit, obcaecati laudantium, aspernatur corporis, iste odit culpa. Facilis, odit ea! Hic quia molestias cupiditate tempora? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius aliquid ea dicta numquam minus earum culpa, magnam quibusdam doloremque facilis amet nesciunt laborum iure temporibus vel alias quia? Accusantium, dolores.</p>
+            <p class="text-encuentros">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic magni beatae reiciendis nam minus velit, obcaecati laudantium, aspernatur corporis, iste odit culpa. Facilis, odit ea! Hic quia molestias cupiditate tempora? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius aliquid ea dicta numquam minus earum culpa, magnam quibusdam doloremque facilis amet nesciunt laborum iure temporibus vel alias quia? Accusantium, dolores.</p>
         </div>
         <section class="flex-encuentros">
-            <div class="flex-encuentros-items">
+            <div class="flex-encuentros-items"data-aos="zoom-out-down" data-aos-duration="3000">
                 <img src="/assets/img/Encuentro-4.jpg" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur modi exercitationem repellendus ipsam asperiores dolores cum quidem, perferendis corporis delectus illum unde perspiciatis, itaque ratione labore tempore ab? Praesentium, itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus ad facilis, laborum adipisci recusandae veritatis vitae dignissimos porro perferendis expedita iusto non dolorem reprehenderit earum, iure, maiores consequuntur deserunt.</p>
             </div>
-            <div class="flex-encuentros-items">
+            <div class="flex-encuentros-items"data-aos="zoom-out-down" data-aos-duration="3000">
                 <img src="/assets/img/Encuentro-3.jpg" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur modi exercitationem repellendus ipsam asperiores dolores cum quidem, perferendis corporis delectus illum unde perspiciatis, itaque ratione labore tempore ab? Praesentium, itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus ad facilis, laborum adipisci recusandae veritatis vitae dignissimos porro perferendis expedita iusto non dolorem reprehenderit earum, iure, maiores consequuntur deserunt.</p>
             </div>
-            <div class="flex-encuentros-items">
+            <div class="flex-encuentros-items"data-aos="zoom-out-down" data-aos-duration="3000">
                 <img src="/assets/img/Encuentro-2.jpg" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur modi exercitationem repellendus ipsam asperiores dolores cum quidem, perferendis corporis delectus illum unde perspiciatis, itaque ratione labore tempore ab? Praesentium, itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus ad facilis, laborum adipisci recusandae veritatis vitae dignissimos porro perferendis expedita iusto non dolorem reprehenderit earum, iure, maiores consequuntur deserunt.</p>
             </div>
-            <div class="flex-encuentros-items">
+            <div class="flex-encuentros-items"data-aos="zoom-out-down" data-aos-duration="3000">
                 <img src="/assets/img/Encuentro en el nido.jpg" alt="">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur modi exercitationem repellendus ipsam asperiores dolores cum quidem, perferendis corporis delectus illum unde perspiciatis, itaque ratione labore tempore ab? Praesentium, itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus ad facilis, laborum adipisci recusandae veritatis vitae dignissimos porro perferendis expedita iusto non dolorem reprehenderit earum, iure, maiores consequuntur deserunt.</p>
             </div>
             
         </section>
     </main>
-    <footer class="footer">
+    <footer>
         <h4>Desarrollado por Mt</h4>
-        <a href="index.html"><img class="footer-logo" src="/assets/icons/logo-2.png" alt="logo"></a>
+        <a href="/index.html"><img class="footer-logo" src="/assets/icons/logo-2.png" alt="logo"></a>
         <div class="redes">
             <h3>Seguinos</h3>
             <a target="_blank" href="https://www.instagram.com/agitando_el_nido/"><img  class="footer-icon" src="/assets/icons/icono-de-instagram-colorido.png" alt="icon-ig"></a>
             <a target="_blank" href="https://www.youtube.com/channel/UCu-ccm0jKSlv8WVDpk6585A"><img class="footer-icon--youtube" src="/assets/icons/youtube-icon.svg" alt="icon-youtube"></a>
         </div>
     </footer>
-<script src="/libs/bootstrap-dist/js/bootstrap.min.js"></script> 
+<script src="/libs/bootstrap-dist/js/bootstrap.min.js"></script>
+<!--link de aos-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script> 
 
 </body>
 </html>
