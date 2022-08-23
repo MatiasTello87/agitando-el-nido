@@ -1,8 +1,9 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100;200;400;600&family=Raleway:wght@100;300;600;800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300&family=Roboto:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Poppins:wght@100;200;400;600&family=Raleway:wght@100;300;600;800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300&family=Roboto:wght@100;400;700&display=swap");
 * {
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
 
 /* Contenedor-transparente */
 /*Estilos generales  */
@@ -23,8 +24,6 @@ header {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
   position: sticky;
   top: 0;
@@ -34,7 +33,9 @@ header {
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-duration: 3s;
-  margin-bottom: 5em; }
+  margin-bottom: 5em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
 
 @keyframes header {
   0% {
@@ -119,7 +120,7 @@ footer {
   margin: 0 auto;
   height: 70px;
   padding: 1em;
-  font-size: .8em;
+  font-size: .5em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -128,9 +129,9 @@ footer {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
+  box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
 
 .footer-logo {
   width: 40px;
@@ -170,7 +171,7 @@ footer {
     border-radius: 15px; }
 
 /* slider bootrtrap */
-.container {
+.slide {
   width: 70%;
   margin: 3em auto; }
 
@@ -179,7 +180,7 @@ main h2 {
   font-size: 2em;
   text-align: center;
   color: #2370c2;
-  margin-bottom: 1em; }
+  margin: 2em 0; }
 
 .text-index {
   padding: 1em;
@@ -189,15 +190,14 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
 
 /* Textos en todas las secciones */
 .text {
   width: 80%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.3em; }
 
 /* Section */
 .flex-gallery {
@@ -225,8 +225,6 @@ main h2 {
     border-left: inset 0.1px #EAEAEA;
     border-right: inset 0.1px #2370c2;
     border-bottom: inset 0.1px #542260;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
 
 /* flex-tecnicas */
@@ -247,12 +245,10 @@ main h2 {
     border-left: inset 0.1px #EAEAEA;
     border-right: inset 0.1px #2370c2;
     border-bottom: inset 0.1px #542260;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
-
-.tecnicas-video {
-  width: 100%; }
+    box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
+    margin: 0 auto; }
+  .container-tecnicas video {
+    width: 100%; }
 
 .tecnicas-tittle {
   font-size: 2em;
@@ -280,8 +276,6 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
   .container-info img {
     border-radius: 15px; }
@@ -313,8 +307,6 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
   border-radius: 15px; }
   .flex-obras-items h3 {
@@ -338,7 +330,8 @@ main h2 {
 
 .text-encuentros {
   width: 80%;
-  margin: 0 auto 5em; }
+  margin: 0 auto;
+  text-align: center; }
 
 .flex-encuentros-items {
   display: flex;
@@ -352,8 +345,6 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
   border-radius: 30px; }
   .flex-encuentros-items p {
@@ -361,23 +352,27 @@ main h2 {
   .flex-encuentros-items img {
     border-radius: 15px; }
 
-/* Somos */
-.flex-somos {
+/* Bio */
+.img-biografia {
+  width: 100%;
+  margin: 3em auto; }
+
+.texto-somos {
   display: flex;
   flex-direction: column;
-  padding: 2em;
-  margin: 5em; }
-  .flex-somos h2 {
+  align-items: center;
+  padding: 1em;
+  margin: 5em 0; }
+  .texto-somos h2 {
     color: #2370c2;
     font-size: 3em;
-    text-align: center;
     margin: 1em 0; }
-  .flex-somos img {
-    margin-bottom: 3em; }
+  .texto-somos img {
+    margin: 3em 0; }
 
 /* Tarjetas */
 .card-somos {
-  width: 350px;
+  width: 300px;
   height: 200px;
   margin: 1em auto;
   padding: 1em;
@@ -390,15 +385,13 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
   .card-somos img {
     width: 70px;
     height: 70px;
     border-radius: 50%; }
   .card-somos p {
-    width: 160px;
+    width: 120px;
     text-align: start; }
 
 .perfil {
@@ -418,8 +411,6 @@ main h2 {
   border-left: inset 0.1px #EAEAEA;
   border-right: inset 0.1px #2370c2;
   border-bottom: inset 0.1px #542260;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798); }
 
 form fieldset p {
@@ -445,38 +436,54 @@ button {
 
 /* media queries */
 /*Mobile */
-@media (max-width: 576px) {
+@media (max-width: 468px) {
   /* estilos generales */
   body,
-  .header,
-  .footer {
-    width: 500px; }
   .header {
-    flex-direction: column;
+    width: 350px; }
+  .header {
+    flex-direction: row;
     align-items: center; }
   .header__logo {
     width: 60px;
     height: 60px;
     margin: 1em 0; }
   .text {
-    width: 300px; }
+    width: 300px;
+    margin: 0 auto; }
+  .tittle {
+    font-size: 4em; }
+  footer {
+    font-size: .5px; }
   /* index */
   main {
-    margin-top: 5em; }
+    margin-top: 1em;
+    overflow-x: hidden; }
   .inicio__container {
     flex-direction: column-reverse;
     align-items: center;
     margin: 0 auto; }
-  .inicio__container video {
-    width: 500px;
-    margin-bottom: 3em; }
+    .inicio__container video {
+      width: 350px;
+      margin-bottom: 1px; }
+    .inicio__container h1 {
+      transform: translate(-40px);
+      animation: none; }
+  .slide {
+    width: 100%; }
   /* taller */
   /* grid */
   .taller-container-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(9, 1fr); }
+  .container-tecnicas {
+    width: 350px; }
   .container-info {
-    width: 500px; }
+    width: 350px;
+    font-size: .5em;
+    line-height: normal; }
+    .container-info img {
+      width: 50%; }
   /* obras */
   .flex-obras-container {
     flex-direction: column;
@@ -484,21 +491,23 @@ button {
   .flex-obras-items {
     margin: 2em 0; }
   /* Biografía */
-  .card-somos--1,
-  .card-somos--3 {
-    transform: translate(-40px, 0px); }
+  .texto-somos {
+    justify-content: center; }
   /* Encuentros */
   .tittle-encuentros {
     transform: translate(-30px, 0); }
   .flex-encuentros-items {
     flex-direction: column;
-    padding: 2em; }
-  .flex-encuentros-items img {
-    width: 270px;
-    margin-bottom: 1em; }
-  .flex-encuentros-items p {
-    width: 250px;
-    text-align: center; }
+    padding: 2em;
+    width: 100%; }
+    .flex-encuentros-items img {
+      width: 270px;
+      margin-bottom: 1em; }
+    .flex-encuentros-items p {
+      width: 300px;
+      text-align: center; }
   /* Contacto */
   .tittle-contacto {
-    transform: translate(-60px, 0); } }
+    transform: translate(-60px, 0); }
+  .fieldset-css {
+    width: 100%; } }
