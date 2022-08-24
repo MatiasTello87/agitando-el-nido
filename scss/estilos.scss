@@ -244,15 +244,15 @@ main h2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-    row-gap: 10px;
+    gap: 20px;
     justify-items: center;
     align-items: center;
     margin: 5em 0;
     img{
-
+        width: 350px;
         @include contenedor-transparente();
     
-    }
+    };
 }
 
 
