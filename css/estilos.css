@@ -510,7 +510,7 @@ button {
     justify-content: center; }
   /* Encuentros */
   .tittle-encuentros {
-    transform: translate(-30px, 0); }
+    text-align: center; }
   .flex-encuentros-items {
     flex-direction: column;
     padding: 2em;
