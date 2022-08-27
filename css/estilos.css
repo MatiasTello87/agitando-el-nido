@@ -81,7 +81,8 @@ a.nav-link:hover {
 
 /* Animacíon logos-tittles */
 .logo-big,
-.inicio__container h1 {
+.inicio__container h1,
+.videodanza {
   transition: 3s;
   animation-name: tittle-animado;
   animation-timing-function: ease-out;
@@ -292,6 +293,12 @@ main h2 {
   color: #2370c2;
   margin-bottom: 2em; }
 
+.videodanza {
+  color: #E56399;
+  position: relative;
+  left: 150px;
+  bottom: 10px; }
+
 .flex-obras-container {
   display: flex;
   padding: 1em;
@@ -348,10 +355,17 @@ main h2 {
   border-bottom: inset 0.1px #542260;
   box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
   border-radius: 30px; }
-  .flex-encuentros-items p {
-    width: 300px; }
   .flex-encuentros-items img {
     border-radius: 15px; }
+  .flex-encuentros-items div {
+    flex-direction: column;
+    text-align: center; }
+    .flex-encuentros-items div h5 {
+      color: #6e9d48; }
+    .flex-encuentros-items div h6 {
+      color: #2370c2; }
+    .flex-encuentros-items div p {
+      width: 270px; }
 
 /* Bio */
 .img-biografia {

@@ -108,7 +108,8 @@ a.nav-link:hover{
 
 /* Animacíon logos-tittles */
 .logo-big,
-.inicio__container h1{
+.inicio__container h1,
+.videodanza{
     transition: 3s;
     animation-name: tittle-animado;
     animation-timing-function: ease-out;
@@ -317,6 +318,12 @@ main h2{
     color: $color-blue;
     margin-bottom: 2em;
 }
+.videodanza{
+    color: $color-rosa;
+    position: relative;
+    left: 150px;
+    bottom: 10px;
+}
 .flex-obras-container{
     display: flex;
     padding: 1em;
@@ -371,12 +378,23 @@ main h2{
     margin: 2em auto;
     @include contenedor-transparente();
     border-radius: 30px;
-    p{
-        width: 300px;
-    };
     img{
         border-radius: 15px;
     };
+    div{
+        flex-direction: column;
+        text-align: center;
+        h5{
+            color: $color-light-green;
+    
+        }
+        h6{
+            color: $color-blue;
+        }
+        p{
+            width: 270px;
+        };
+    }
 }
 
 
