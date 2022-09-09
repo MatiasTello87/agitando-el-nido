@@ -486,6 +486,9 @@ button{
     body{
         width: 80%;
     }
+    main{
+        overflow-x: hidden;
+    }
     .inicio__container{
         flex-direction: column-reverse;
         align-items: center;

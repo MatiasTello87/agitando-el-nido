@@ -447,6 +447,8 @@ button {
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   body {
     width: 80%; }
+  main {
+    overflow-x: hidden; }
   .inicio__container {
     flex-direction: column-reverse;
     align-items: center;
