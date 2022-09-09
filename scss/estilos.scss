@@ -18,12 +18,12 @@ $color-title: #E56399;
 // Funciom Mixin
 /* Contenedor-transparente */
 @mixin contenedor-transparente() {
-    background-image: linear-gradient( to bottom, $color-negro, #c2c1c11c);
-    backdrop-filter: blur(10px);
+    background-image: linear-gradient( to bottom, $color-negro, #3d3a621c);
+    backdrop-filter: blur(5px);
     border-left: inset .1px $color-blanco;
     border-right: inset .1px $color-blue;
     border-bottom: inset .1px $color-magenta;
-    box-shadow: 0px 0px 3px rgba(245, 245, 245, 0.798);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.798);
 }
 
                                   /*Estilos generales  */
@@ -33,9 +33,10 @@ body{
     color: $color-blanco;
     background-color: #090909;
     background-image: linear-gradient(to bottom, #090909, #1d39562c);
-    font-family: var(--font-tittle);
-    border-left: 1px solid rgba(255, 255, 255, 0.135);
-    border-right: 1px solid rgba(255, 255, 255, 0.135);
+    border-left: 1px solid #2370c276;
+    border-right: 1px solid #5322608b;
+    box-shadow: 0px 0px 100px  #000000;
+
 }
                                 /* HEADER */
 
@@ -52,7 +53,40 @@ header{
     margin-bottom: 5em;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    .logo-header{
+        width: 50px;
+        height: 50px;
+    }
+    .logo-header,
+    .navbar-toggler{
+        animation-name: logo;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+        animation-duration: 5s;
+    }
+    .navbar{
+        position: sticky;
+        margin-bottom: 3em;
+    }
+    .navbar-collapse {
+        flex-grow: initial;
+        flex-wrap: nowrap;
+    }
+    a.nav-link{
+        color: $color-blanco;
+    }
+// Hover
+    a.nav-link:hover{
+        color: $color-blue;
+    }
+    
+/* Menú hamburguesa */
+    .navbar-toggler{
+        background-image: none;
+        backdrop-filter: none;
+    }
 }
+// Animaciones de logo
 @keyframes header {
     0%{ transform: translate(0,-70px);
 
@@ -61,17 +95,8 @@ header{
         transform: translate(0,0);
     }
 }
-.logo-header{
-    width: 50px;
-    height: 50px;
-}
-.logo-header,
-.navbar-toggler{
-    animation-name: logo;
-    animation-timing-function: ease-in;
-    animation-iteration-count: 1;
-    animation-duration: 5s;
-}
+
+
 /* Animación logo- icon-hamburger header */
 @keyframes logo{
     0%{
@@ -80,36 +105,11 @@ header{
     100%{
         transform: scale(1);
     }
-    
 }
-
-.navbar{
-    position: sticky;
-    margin-bottom: 3em;
-}
-.navbar-collapse {
-    flex-grow: initial;
-}
-a.nav-link{
-    color: $color-blanco;
-}
-// Hover
-a.nav-link:hover{
-    color: $color-blue;
-}
-
-/* Menú hamburguesa */
-.navbar-toggler{
-    background-image: none;
-    backdrop-filter: none;
-}
-
-
 
 /* Animacíon logos-tittles */
 .logo-big,
-.inicio__container h1,
-.videodanza{
+.inicio__container h1{
     transition: 3s;
     animation-name: tittle-animado;
     animation-timing-function: ease-out;
@@ -145,38 +145,45 @@ a.nav-link:hover{
 }
                                 /* FOOTER */
 footer{
-width: 100%;
-position: relative;
 color: $color-rosa;
-bottom: 0;
-margin: 0 auto;
-height: 70px;
 padding: 1em;
-font-size: .5em;
+height: 70px;
 display: flex;
 justify-content: space-around;
 align-items: center;
 @include contenedor-transparente();
+border-top: outset .1px $color-magenta;
+box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.798);
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-}
-.footer-logo{
-width: 40px;
-height: 40px;
-}
-.redes{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.footer-icon{
-width: 30px;
-height: 30px;
-margin: 0 2em;
-}
-.footer-icon--youtube{
-width: 25px;
-height: 25px;
+    .info-desarrollador{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo-personal{
+            width: 30px;
+            height: 30px;
+        }
+        h6{
+            color: $color-blue;
+        }
+    }
+    .footer-logo{
+    width: 40px;
+    height: 40px;
+    transform: translateX(-60px);
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icons{
+            flex-direction: row;
+        }
+        .footer-icon{
+            margin-right: 1em;
+        }
+    }
 }
 
 
@@ -200,13 +207,14 @@ height: 25px;
         video{
             box-shadow: 1px 0px 2px $color-magenta;
             border-radius: 15px;
-            
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.798);
         }
 }
 /* slider bootrtrap */
 .slide{
     width: 70%;
     margin: 3em auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.798);
 }
                             /* Titulo principal */
 main h2{
@@ -232,6 +240,9 @@ main h2{
     display: flex;
     justify-content: center;
     margin: 5em 0;
+    img{
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    }
 }
 .tittle-medium{
     text-align: center;
@@ -313,16 +324,15 @@ main h2{
 }
                        /* obras */
 
-.obras-subtittle{
+.videos-danza{
     text-align: center;
+    display: block;
+    padding: .5em;
+    width: 250px;
+    border-radius: 15px;
     color: $color-blue;
-    margin-bottom: 2em;
-}
-.videodanza{
-    color: $color-rosa;
-    position: relative;
-    left: 150px;
-    bottom: 10px;
+    margin: 2em auto;
+    @include contenedor-transparente();
 }
 .flex-obras-container{
     display: flex;
@@ -385,7 +395,7 @@ main h2{
         flex-direction: column;
         text-align: center;
         h5{
-            color: $color-light-green;
+            color: $color-rosa;
     
         }
         h6{
@@ -403,22 +413,11 @@ main h2{
     width: 100%;
     margin: 3em auto;
 }
-.texto-somos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    margin: 5em 0;
-    h2{
-        color: $color-blue;
-        font-size: 3em;
-        margin: 1em 0;
-    };
-    img{
-        margin: 3em 0;
-    }
+.container-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
 }
-
 
 /* Tarjetas */
 .card-somos{
@@ -427,18 +426,20 @@ main h2{
     margin: 1em auto;
     padding: 1em;
     display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 30px;
     @include contenedor-transparente();
     img{
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-    };
+    }
     p{
-        width: 120px;
+        width: 150px;
         text-align: start;
+    }
+    h5{
+        text-align: center;
+        color: $color-blue;
     }
 }
 .perfil{
@@ -480,25 +481,133 @@ button{
     color: $color-blanco;
 }
                         /* media queries */
+// Pantallas Grandes
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    body{
+        width: 80%;
+    }
+    .inicio__container{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+        video{
+            width: 500px;
+            margin-bottom: 3em;
+        }
+        h1{
+            transform: translate(-40px);
+        }
+    }
+}
 
+// Tablets
+@media only screen and (max-width: 768px) {
+// estilos generales
+body{
+    width: 80%;
+}
+// Footer
+footer{
+    height: 90px;
+    text-align: center;
+    justify-content: space-between;
+    .footer-logo{
+        width: 20%;
+        height: 20%;
+        transform: translateX(-60px);
+    }
+}
+// index
+    main{
+        overflow-x: hidden;
+    }
+    .inicio__container{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+        video{
+            width: 500px;
+            margin-bottom: 3em;
+        }
+        h1{
+            transform: translate(-40px);
+        }
+    }
+    .slide{
+        width: 100%;
+    }
+// obras
+    .flex-obras-container{
+        flex-direction: column;
+        .flex-obras-items{
+            margin-bottom: 2em;
+        }
+    }
+// taller
+    .taller-container-grid{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(9,1fr);
+    }
+    .container-info{
+        width: 90%;
+        .info-text{
+            font-size: 1em;
+        }
+    }
+// Bio
+    .container-tarjetas{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(12,1fr);
+    }
+// Encuentros
+    .flex-encuentros-items{
+        flex-direction: column;
+        padding: 1em;
+        width: 80%;
+        img{
+            width: 80%;
+            margin-bottom: 1em;
+        }
+        p{
+            width: 80%;
+            text-align: center;
+        }
+    }
+// Contacto
+    .fieldset-css{
+        width: 80%;
+    }
+}
+// Mobil-big
+@media only screen and (max-width: 576px){
+    footer{
+        .footer-logo{
+            transform: translateX(-20px);
+        }
+    }
+// Taller
+    .container-info{
+        width: 350px;
+        font-size: .5em;
+        line-height: normal;
+        img{
+            width: 50%;
+        }
+    }
+}
 /*Mobile */
-@media (max-width:468px){
+@media only screen and (max-width:468px){
 /* estilos generales */
         body,
         .header{
-            width: 350px;
+            width: 80%;
         }
-        .header{
-            flex-direction: row;
-            align-items: center;
-        }
-        .header__logo{
-            width: 60px;
-            height: 60px;
-            margin: 1em 0;
+        .logo-header{
+            width: 20%;
+            height: 20%;
         }
         .text{
-            width: 300px;
+            width: 90%;
             margin: 0 auto;
         }
         // titulos en las secciones
@@ -508,7 +617,15 @@ button{
 
 //Footer
         footer{
-            font-size: .5px;
+            height: 100px;
+            text-align: center;
+            justify-content: space-between;
+            .footer-logo{
+                width: 30%;
+                height: 30%;
+                text-align: center;
+                transform: translateX(-20px);
+            }
         }
 /* index */
         main{
@@ -524,8 +641,13 @@ button{
                 margin-bottom: 1px;
             }
             h1{
-                transform: translate(-40px);
+                // transform: translate(-40px);
                 animation: none;
+                font-size: 4em;
+                line-height: 70px;
+            }
+            span{
+                margin: 0;
             }
         }
         .slide{
@@ -586,5 +708,4 @@ button{
         .fieldset-css{
             width: 100%;
         }
-
 }
