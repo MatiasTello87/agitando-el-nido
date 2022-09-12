@@ -53,9 +53,11 @@ header {
     flex-grow: initial;
     flex-wrap: nowrap; }
   header a.nav-link {
-    color: #EAEAEA; }
+    color: #174a80;
+    font-weight: 800;
+    text-align: end; }
   header a.nav-link:hover {
-    color: #2370c2; }
+    color: #E56399; }
   header .navbar-toggler {
     background-image: none;
     backdrop-filter: none; }
@@ -226,38 +228,10 @@ main h2 {
     border-bottom: inset 0.1px #542260;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.798); }
 
-/* flex-tecnicas */
-.flex-tecnicas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5em; }
-
-.container-tecnicas {
-  width: 80%;
-  padding: 2em; }
-  .container-tecnicas p {
-    padding: 2em;
-    border-radius: 15px;
-    background-image: linear-gradient(to bottom, #141414, #3d3a621c);
-    backdrop-filter: blur(5px);
-    border-left: inset 0.1px #EAEAEA;
-    border-right: inset 0.1px #2370c2;
-    border-bottom: inset 0.1px #542260;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.798);
-    margin: 0 auto; }
-  .container-tecnicas video {
-    width: 100%; }
-
-.tecnicas-tittle {
-  font-size: 2em;
-  padding: 1em;
-  color: #2370c2; }
-
 /* taller-article */
 .article h2 {
   font-size: 2em;
-  padding: 3em;
+  padding: 1em;
   text-align: center;
   color: #E56399; }
 
@@ -369,14 +343,18 @@ main h2 {
       width: 270px; }
 
 /* Bio */
-.img-biografia {
-  width: 100%;
-  margin: 3em auto; }
+.imagen-somos {
+  text-align: center;
+  margin: 2em; }
+  .imagen-somos .img-biografia {
+    width: 70%;
+    border-radius: 30px; }
 
 .container-tarjetas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr); }
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 2em; }
 
 /* Tarjetas */
 .card-somos {
@@ -395,13 +373,15 @@ main h2 {
   .card-somos img {
     width: 100px;
     height: 100px;
-    border-radius: 50%; }
-  .card-somos p {
-    width: 150px;
-    text-align: start; }
-  .card-somos h5 {
+    border-radius: 50%;
+    margin-bottom: .5em; }
+  .card-somos ul li {
+    list-style: none;
+    padding: .3em; }
+  .card-somos h4 {
     text-align: center;
-    color: #2370c2; }
+    color: #E56399;
+    margin-bottom: 0; }
 
 .perfil {
   flex-direction: column;
@@ -457,7 +437,35 @@ button {
       width: 500px;
       margin-bottom: 3em; }
     .inicio__container h1 {
-      transform: translate(-40px); } }
+      transform: translate(-40px); }
+  .flex-obras-container {
+    flex-direction: column; }
+    .flex-obras-container .flex-obras-items {
+      margin-bottom: 2em; }
+  .taller-container-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); }
+    .taller-container-grid img {
+      width: 90%; }
+  .container-info {
+    width: 90%;
+    line-height: normal; }
+    .container-info img {
+      width: 30%; }
+  .container-tarjetas {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr); }
+  .tittle-encuentros {
+    text-align: center; }
+  .flex-encuentros-items {
+    width: 90%;
+    padding: 1em; }
+    .flex-encuentros-items img {
+      width: 50%; }
+    .flex-encuentros-items p {
+      width: 50%; }
+  .fieldset-css {
+    height: 110%; } }
 
 @media only screen and (max-width: 768px) {
   body {
@@ -496,7 +504,9 @@ button {
       font-size: 1em; }
   .container-tarjetas {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(12, 1fr); }
+    grid-template-rows: repeat(6, 1fr); }
+  .tittle-encuentros {
+    text-align: center; }
   .flex-encuentros-items {
     flex-direction: column;
     padding: 1em;
@@ -511,14 +521,21 @@ button {
     width: 80%; } }
 
 @media only screen and (max-width: 576px) {
-  footer .footer-logo {
-    transform: translateX(-20px); }
+  footer {
+    text-align: center;
+    justify-content: center; }
+    footer .footer-logo {
+      transform: translateX(-20px); }
   .container-info {
     width: 350px;
     font-size: .5em;
     line-height: normal; }
     .container-info img {
-      width: 50%; } }
+      width: 50%; }
+  /* Encuentros */
+  .tittle-encuentros {
+    text-align: center;
+    font-size: 3em; } }
 
 /*Mobile */
 @media only screen and (max-width: 468px) {
@@ -567,10 +584,10 @@ button {
   .taller-container-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(9, 1fr); }
-  .container-tecnicas {
-    width: 350px; }
+    .taller-container-grid img {
+      width: 90%; }
   .container-info {
-    width: 350px;
+    width: 90%;
     font-size: .5em;
     line-height: normal; }
     .container-info img {
@@ -580,10 +597,18 @@ button {
     flex-direction: column;
     align-items: center; }
   .flex-obras-items {
+    width: 90%;
     margin: 2em 0; }
+    .flex-obras-items video {
+      width: 100%; }
   /* Biografía */
   .texto-somos {
     justify-content: center; }
+  .card-somos {
+    width: 90%;
+    height: 90%; }
+    .card-somos p {
+      width: 80%; }
   /* Encuentros */
   .tittle-encuentros {
     text-align: center; }
@@ -602,3 +627,34 @@ button {
     transform: translate(-60px, 0); }
   .fieldset-css {
     width: 100%; } }
+
+@media only screen and (max-width: 360px) {
+  footer {
+    height: 120px;
+    font-size: .5em; }
+    footer .footer-logo {
+      width: 30%;
+      height: 30%;
+      transform: translateX(0px); }
+  .flex-obras-items {
+    width: 90%;
+    margin: 2em 0; }
+    .flex-obras-items video {
+      width: 100%; }
+  .taller-container-grid img {
+    width: 90%; }
+  .container-info {
+    width: 90%;
+    font-size: .5em;
+    line-height: normal; }
+    .container-info img {
+      width: 50%; }
+  .card-somos {
+    width: 90%;
+    height: 90%; }
+    .card-somos p {
+      width: 80%; }
+  .tittle-encuentros {
+    font-size: 3em; }
+  .fieldset-css {
+    height: 110%; } }
